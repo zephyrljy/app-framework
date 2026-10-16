@@ -1,0 +1,25 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  content: { padding: 20, gap: 16, paddingBottom: 40 },
+  screen: { flex: 1, backgroundColor: "#f5f7f6" },
+  centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
+  title: { fontSize: 26, fontWeight: "700", color: "#172b25" },
+  subtitle: { fontSize: 14, color: "#60756c" },
+  card: { padding: 20, borderRadius: 20, backgroundColor: "white", gap: 10 },
+  hero: { padding: 24, borderRadius: 24, backgroundColor: "#173f32", gap: 14 },
+  heroLabel: { fontSize: 14, color: "#c5dfd1" },
+  heroAmount: { fontSize: 34, fontWeight: "700", color: "white" },
+  row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 },
+  label: { fontSize: 15, color: "#60756c" },
+  value: { fontSize: 19, fontWeight: "600", color: "#172b25" },
+  button: { minHeight: 48, padding: 14, borderRadius: 14, backgroundColor: "#173f32", alignItems: "center", justifyContent: "center" },
+  buttonText: { color: "white", fontSize: 16, fontWeight: "600" },
+  input: { minHeight: 50, borderWidth: 1, borderColor: "#d9e2dd", borderRadius: 12, padding: 14, fontSize: 16, backgroundColor: "white", color: "#172b25" },
+  error: { color: "#b42318", fontSize: 14 },
+  disabled: { opacity: 0.5 },
+  chip: { minHeight: 44, paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12, backgroundColor: "#e3eae6", justifyContent: "center" },
+  chipActive: { backgroundColor: "#173f32" },
+  actions: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  divider: { height: 1, backgroundColor: "#e3eae6", marginVertical: 6 },
+});

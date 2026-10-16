@@ -1,0 +1,13 @@
+services:
+  app-framework:
+    build: .
+    image: app-framework:local
+    env_file:
+      - deploy/.env.production
+    environment:
+      NODE_ENV: production
+      PORT: ${PORT:-3000}
+      LOG_LEVEL: info
+    # Shares the server network so 127.0.0.1:3306 reaches the app-mysql container
+    network_mode: host
+    restart: unless-stopped

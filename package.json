@@ -1,0 +1,27 @@
+{
+  "name": "app-framework",
+  "private": true,
+  "packageManager": "pnpm@8.15.9",
+  "scripts": {
+    "dev": "pnpm build:packages && pnpm --parallel --filter @app/web --filter @app/server dev",
+    "start": "docker compose -f deploy/mysql.compose.yaml up -d && pnpm dev",
+    "build": "pnpm -r build",
+    "build:docker": "pnpm --filter @app/web... --filter @app/server... build && rm -rf output/docker/server && pnpm --filter @app/server --prod deploy output/docker/server",
+    "typecheck": "pnpm build:packages && pnpm -r typecheck",
+    "dev:web": "pnpm dev",
+    "dev:mobile": "pnpm build:packages && pnpm --filter @app/mobile dev",
+    "ios": "pnpm --filter @app/mobile ios",
+    "android": "pnpm --filter @app/mobile android",
+    "test": "pnpm --filter @app/server test",
+    "build:packages": "pnpm --filter \"./packages/*\" build",
+    "db:migrate": "pnpm --filter @app/server db:migrate",
+    "reload:pro": "bash deploy/reload-production.sh"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.2.3",
+      "react-dom": "19.2.3",
+      "react-native": "0.86.3"
+    }
+  }
+}

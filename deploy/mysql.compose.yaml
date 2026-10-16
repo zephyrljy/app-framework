@@ -1,0 +1,19 @@
+name: app-mysql-local
+
+services:
+  mysql:
+    image: mysql:8.4
+    env_file:
+      - .env.local
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --skip-log-bin --performance-schema=OFF --mysqlx=OFF
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+volumes:
+  data:

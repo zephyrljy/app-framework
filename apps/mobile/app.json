@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "App",
+    "slug": "app-framework",
+    "scheme": "appframework",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.appframework"
+    },
+    "android": {
+      "package": "com.example.appframework"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ]
+  }
+}

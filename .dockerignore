@@ -1,0 +1,9 @@
+**
+!output/
+!output/docker/
+!output/docker/server/
+!output/docker/server/**
+!apps/
+!apps/web/
+!apps/web/dist/
+!apps/web/dist/**
